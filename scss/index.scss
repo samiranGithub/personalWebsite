@@ -1,0 +1,44 @@
+
+// Sass partials....
+@import "partials/variables";
+@import "partials/mixin";
+
+// MAIN HTML STRUCTURE START..........
+@import "component/reset";
+
+@import "component/scrollEffect";
+
+@import "component/body";
+
+@import "component/reusable-class";
+
+@import "component/modalGlobal";
+
+@import "component/headerSection";
+
+@import "component/heroSection";
+
+@import "component/aboutSection";
+
+@import "component/skillsSection";
+
+@import "component/serviceSection";
+
+@import "component/pricingModal";
+
+@import "component/subscribeSection";
+
+@import "component/portfolioSection";
+
+@import "component/portfolioModal";
+
+@import "component/teamSection";
+
+@import "component/faqSection";
+
+@import "component/contactSection";
+
+@import "component/footerSection";
+
+@import "component/jumpToTopbtn";
+// MAIN HTML STRUCTURE END..........

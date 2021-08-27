@@ -1,0 +1,43 @@
+/****** Footer Section Start ******/
+.footer_up_svg {
+  vertical-align: middle;
+  > path {
+    fill: $color_primary;
+  }
+}
+
+#footer__section {
+  background-color: $color_primary;
+}
+
+.footer_item {
+  >h3 {
+    text-align: center;
+    padding: 4% 0 2% 0;
+    color: $color_light;
+    font-size: 2rem;
+  }
+}
+
+.footer_follow_icon {
+  @include display_flex_center;
+
+  > a {
+    margin: 2%;
+  }
+}
+
+.copyRightText {
+  height: 100%;
+  @include display_flex_center;
+  @include contentpadding_Y;
+  > span {
+    text-align: center;
+    color: $color_light;
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
+
+/*** Footer Section End *******/

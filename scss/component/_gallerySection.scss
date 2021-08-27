@@ -1,0 +1,199 @@
+/***** Gallery Section Start *****/
+#gallery__section {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+  }
+  &::before {
+    background: var(--color-body) url(../photos/dotsBg.png) no-repeat
+      center/cover;
+    bottom: 0;
+    left: 0;
+  }
+  &::after {
+    background: var(--color-body) url(../photos/dotsBg2.png) no-repeat
+      center/cover;
+    top: 0;
+    right: 0;
+  }
+  .container {
+    > h2 {
+      z-index: 1;
+    }
+    > span {
+      z-index: 1;
+    }
+  }
+}
+
+.gallery__pictures {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
+.gallery_photo {
+  max-height: 300px;
+  width: 100%;
+  margin: 1%;
+  overflow: hidden;
+  position: relative;
+  > img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    transition: all 0.5s linear;
+  }
+
+  &:hover > img {
+    transform: scale(1.3);
+  }
+
+  &:hover > .gallery_photo_overlay {
+    height: 100%;
+  }
+}
+
+.gallery_photo_overlay {
+  width: 100%;
+  height: 0;
+  background-color: var(--gPhoto-overlay-BGcolor);
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  @include display_flex_center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  > span {
+    font-weight: 700;
+    color: var(--gPhoto-overlay-textColor);
+  }
+  > i {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-top: 8%;
+    color: var(--gPhoto-overlay-textColor);
+    &:hover {
+      color: $color_hotpink;
+    }
+  }
+}
+
+//gallery modal start.......
+.galleryModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 6%;
+  width: 100%;
+  height: 90vh;
+  overflow: auto;
+  background-color: $color_dark;
+  padding-top: 70px;
+  user-select: none;
+  .close {
+    position: absolute;
+    top: 1.6rem;
+    right: 10px;
+    color: $color_light;
+    font-size: 1.7em;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: $color_hotpink;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.gallery_modal_items {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.sliderImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.imgNumber {
+  color: $color_dark;
+  font-weight: bold;
+  position: absolute;
+  top: 5%;
+  left: 8%;
+}
+.sliderImg > img {
+  width: 100%;
+  height: 100%;
+}
+.captionText {
+  color: $color_orange;
+  font-weight: bold;
+  position: absolute;
+  bottom: 5%;
+  left: 7%;
+}
+
+.imgFade {
+  animation: fade 1s;
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.prevBtn,
+.nextBtn {
+  color: $color_light;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0% 1%;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+  height: 100%;
+  @include display_flex_center;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: #777;
+    color: $color_orange;
+  }
+}
+.prevBtn {
+  left: 0;
+  background: linear-gradient(-90deg, transparent, #777777c0);
+}
+.nextBtn {
+  right: 0;
+  background: linear-gradient(90deg, transparent, #777777c0);
+}
+
+//gallery modal end.......
+
+/* media query for gallery section start.. */
+@include smallDevice {
+  .gallery_photo {
+    min-height: 150px;
+  }
+}
+/* media query for gallery section end.. */
+/*========= Gallery Section End =========*/
