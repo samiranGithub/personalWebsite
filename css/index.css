@@ -1551,6 +1551,7 @@ body .full-body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 8px;
+  word-break: break-all;
 }
 
 /* media query for qulafication section start.. */
