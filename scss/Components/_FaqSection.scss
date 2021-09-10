@@ -1,35 +1,37 @@
 /*=====Faq Section Start=====*/
-.faq_up_svg {
-  // background: linear-gradient(90deg, #2e15ff, #8986b7, #00adff);
-  background: linear-gradient(90deg, teal, #217689);
+// .faq_up_svg {
+//   // background: linear-gradient(90deg, #2e15ff, #8986b7, #00adff);
+//   background: linear-gradient(90deg, teal, #217689);
 
-  path {
-    fill: #c4d5ff;
-  }
-}
-.faq_down_svg {
-  background-color: #c4d5ff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  path {
-    fill: var(--color-body);
-  }
-}
+//   path {
+//     // fill: #c4d5ff;
+//     background-color: hsl(223, 100%, 88%);
+//   }
+// }
+// .faq_down_svg {
+//   // background-color: #c4d5ff;
+//   background-color: hsl(223, 100%, 88%);
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   path {
+//     fill: var(--color-body);
+//   }
+// }
 
 #faq__section {
-  background: #c4d5ff;
+  // background: #c4d5ff;
   overflow: hidden;
   position: relative;
-  .container {
-    > h2 {
-      color: $color_dark;
+  // .container {
+  //   > h2 {
+  //     color: $color_dark;
 
-      &::before {
-        display: none;
-      }
-    }
-  }
+  //     &::before {
+  //       display: none;
+  //     }
+  //   }
+  // }
 }
 
 .faq__photo {
@@ -62,7 +64,7 @@
   position: relative;
   padding: 0.938rem 1.875rem;
   width: 100%;
-  color: $color_dark;
+  // color: $color_dark;
   display: block;
   font-weight: 500;
   background-color: #26262600;
@@ -85,7 +87,7 @@
       width: 100%;
       height: 3px;
       border-radius: 2px;
-      background-color: $color_dark;
+      background-color: var(--color-text-primary);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -98,7 +100,7 @@
 }
 // faq active class for faq Tabs...
 .faq__items.active .faq__tabs {
-  color: #808080;
+  color: var(--color-text-third);
   span {
     &::after {
       transform: translateY(-50%) rotate(0deg);
@@ -108,21 +110,20 @@
 
 .faq__data {
   width: 100%;
-  transition: all 0.2s ease-in-out;
   opacity: 0;
-  max-height: 0;
+  height: 0;
   overflow: hidden;
 
   > article {
     font-size: $font_size_small;
-    color: $color_dark;
+    color: var(--color-text-second);
   }
 }
 // faq active class for faq DATA....
 .faq__items.active .faq__data {
   padding: 0.938rem 0.625rem 0.625rem 0.625rem;
   opacity: 1;
-  max-height: 500px;
+  height: max-content;
 }
 
 /*==== Faq Section End ====*/

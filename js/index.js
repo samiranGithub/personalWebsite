@@ -196,12 +196,23 @@ function qualificationFunc() {
 }
 qualificationFunc();
 
+// Qualification Work History
+function qualificationPersonalWork(data) {
+    const qulificationWorkUl = document.querySelector('.qulification_work_ul');
+    const mapingWork = data.map(item => {
+        const { content } = item;
+        return `<li>${content}</li>`;
+    });
+    qulificationWorkUl.innerHTML = mapingWork.join("");
+}
+qualificationPersonalWork(qualificationPersonWork)
+
 // Qualification Personal Data Analize...
-function qualificPersonalData(data) {
+function qualificPersonalInfo(data) {
     let newYear = new Date().getFullYear();
     const personAge = {
         year: 2000,
-        ageFunc : function (newYear) {
+        ageFunc: function (newYear) {
             return newYear - this.year;
         }
     }
@@ -253,7 +264,7 @@ function qualificPersonalData(data) {
     });
     qualificationPersonalInfo.innerHTML = qualificMap.join(" ");
 }
-qualificPersonalData(qualificationInfo);
+qualificPersonalInfo(qualificationInfo);
 
 //Qualification Section End......
 
@@ -462,43 +473,43 @@ function displayPortfModal(portfItems) {
 
 
 
-//Team Section Start...
-let teamSlideIndex = 1;
-let teamTimer;
-teamInit(teamSlideIndex);
+//testimonials Section Start...
+let testimonialsSlideIndex = 1;
+let testimonialsTimer;
+testimonialsInit(testimonialsSlideIndex);
 
-function pulseSlideTeam(e) {
-    teamInit(teamSlideIndex += e);
+function pulseSlidetestimonials(e) {
+    testimonialsInit(testimonialsSlideIndex += e);
 }
 
-function teamSlider(event) {
-    teamInit(teamSlideIndex = event);
+function testimonialsSlider(event) {
+    testimonialsInit(testimonialsSlideIndex = event);
 }
 // slide pause when mouse over slider.
 window.addEventListener('load', () => {
-    teamTimer = setInterval(() => {
-        teamSlider(teamSlideIndex += 1);
+    testimonialsTimer = setInterval(() => {
+        testimonialsSlider(testimonialsSlideIndex += 1);
     }, 10000);
 
-    // let teamIndicator = document.querySelectorAll('.slideIndicator');
-    let tsslide = document.querySelectorAll('.team__slide');
+    // let testimonialsIndicator = document.querySelectorAll('.slideIndicator');
+    let tsslide = document.querySelectorAll('.testimonials__slide');
 
     tsslide.forEach((event) => {
-        event.addEventListener('mouseenter', teamPause);
-        event.addEventListener('mouseleave', teamResume);
-        // event.addEventListener('touchstart', teamPause);
-        // event.addEventListener('touchend', teamResume);
+        event.addEventListener('mouseenter', testimonialsPause);
+        event.addEventListener('mouseleave', testimonialsResume);
+        // event.addEventListener('touchstart', testimonialsPause);
+        // event.addEventListener('touchend', testimonialsResume);
     });
 });
 
-function teamInit(e) {
-    let tsslide = document.querySelectorAll('.team__slide');
+function testimonialsInit(e) {
+    let tsslide = document.querySelectorAll('.testimonials__slide');
     let tsIndicator = document.querySelectorAll('.slideIndicator');
     if (e > tsslide.length) {
-        teamSlideIndex = 1;
+        testimonialsSlideIndex = 1;
     }
     if (e < 1) {
-        teamSlideIndex = tsslide.length;
+        testimonialsSlideIndex = tsslide.length;
     }
     for (let i = 0; i < tsslide.length; i++) {
         tsslide[i].classList.remove('active');
@@ -506,21 +517,41 @@ function teamInit(e) {
     for (let i = 0; i < tsIndicator.length; i++) {
         tsIndicator[i].className = tsIndicator[i].className.replace(' active', '');
     }
-    tsslide[teamSlideIndex - 1].classList.add('active');
-    tsIndicator[teamSlideIndex - 1].className += ' active';
+    tsslide[testimonialsSlideIndex - 1].classList.add('active');
+    tsIndicator[testimonialsSlideIndex - 1].className += ' active';
 }
-function teamPause() {
-    clearInterval(teamTimer);
+function testimonialsPause() {
+    clearInterval(testimonialsTimer);
 }
-function teamResume() {
-    teamTimer = setInterval(() => {
-        teamSlider(teamSlideIndex += 1);
+function testimonialsResume() {
+    testimonialsTimer = setInterval(() => {
+        testimonialsSlider(testimonialsSlideIndex += 1);
     }, 10000);
 }
-// Team Section End...
+// testimonials Section End...
 
 
 // Faq Accordion section start...
+function faqDataItem(data) {
+    const faqAccordion = document.querySelector('.faq__accordion');
+    const mapingFaq = data.map(item => {
+        const { question, answer } = item;
+
+        return `
+        <div class="faq__items">
+             <p class="faq__tabs">${question}<span></span></p>
+             <div class="faq__data">
+                 <article>
+                    ${answer}
+                 </article>
+             </div>
+        </div>
+        `;
+    });
+    faqAccordion.innerHTML = mapingFaq.join("");
+}
+faqDataItem(faqData);
+
 function faqSection() {
     const faqItems = document.querySelectorAll('.faq__items');
     faqItems.forEach(items => {

@@ -8,7 +8,8 @@
 }
 
 html {
-  --color-body: hsl(250, 60%, 99%);
+  // --color-body: hsl(250, 60%, 99%);
+  --color-body: hsl(0deg 0% 98%);
   --color-secondary: hsl(208, 7%, 46%);
   --color-card-body: hsl(0, 0%, 95%);
   --color-card-secondary: linear-gradient(145deg, #eeeeee, #cecece);
@@ -21,7 +22,8 @@ html {
   --color-transparent: #83a2f881;
   --gPhoto-overlay-BGcolor: #000000ad;
   --gPhoto-overlay-textColor: hsl(0, 0%, 100%);
-  --color-input: hsl(0, 0%, 93%);
+  // --color-input: hsl(0, 0%, 93%);
+  --color-input: hsl(0deg 0% 88%);
   --input-inner-shadow: 1px 4px 2px -3px rgba(211, 211, 211, 0.7) inset,
     -1px -3px 3px -2px rgba(255, 255, 255, 0.705) inset;
   --color-text-input: hsl(0, 0%, 36%);
@@ -29,7 +31,8 @@ html {
 }
 
 html[data-theme="dark"] {
-  --color-body: hsl(214, 10%, 14%);
+  // --color-body: hsl(214, 10%, 14%);
+  --color-body: #393e46;
   --color-secondary: hsl(0, 0%, 96%);
   --color-card-body: hsl(0, 0%, 17%);
   --color-card-secondary: linear-gradient(145deg, #1e2024, #23272b);
@@ -43,8 +46,7 @@ html[data-theme="dark"] {
   --gPhoto-overlay-BGcolor: #ffffffb3;
   --gPhoto-overlay-textColor: hsla(0, 0%, 9%, 0.678);
   --color-input: hsl(216, 9%, 11%);
-  --input-inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset,
-    -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+  --input-inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   --color-text-input: hsl(0, 0%, 73%);
   --color-header-shadow: #000000;
 }

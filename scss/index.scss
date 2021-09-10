@@ -3,42 +3,40 @@
 @import "partials/variables";
 @import "partials/mixin";
 
+// Global Style SCSS
+@import "Global-Style/reset";
+
+@import "Global-Style/scrollEffect";
+
+@import "Global-Style/reusable-class";
+
+@import "Global-Style/modalGlobal";
+
+
 // MAIN HTML STRUCTURE START..........
-@import "component/reset";
+@import "Components/Body";
 
-@import "component/scrollEffect";
+@import "Components/HeaderSection";
 
-@import "component/body";
+@import "Components/HeroSection";
 
-@import "component/reusable-class";
+@import "Components/AboutSection";
 
-@import "component/modalGlobal";
+@import "Components/SkillsSection";
 
-@import "component/headerSection";
+@import "Components/ServiceSection";
 
-@import "component/heroSection";
+@import "Components/SubscribeSection";
 
-@import "component/aboutSection";
+@import "Components/PortfolioSection";
 
-@import "component/skillsSection";
+@import "Components/PortfolioModal";
 
-@import "component/serviceSection";
+@import "Components/TestimonialsSection";
 
-@import "component/pricingModal";
+@import "Components/FaqSection";
 
-@import "component/subscribeSection";
+@import "Components/ContactSection";
 
-@import "component/portfolioSection";
-
-@import "component/portfolioModal";
-
-@import "component/teamSection";
-
-@import "component/faqSection";
-
-@import "component/contactSection";
-
-@import "component/footerSection";
-
-@import "component/jumpToTopbtn";
+@import "Components/FooterSection";
 // MAIN HTML STRUCTURE END..........
