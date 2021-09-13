@@ -16,7 +16,7 @@
 
   > span {
     font: normal 600 2.2rem $font_oswald;
-    color: $color_primary_two;
+    color: var(--color-section-title-span);
     position: relative;
     text-decoration: underline;
     text-underline-position: under;
@@ -40,7 +40,7 @@
 // section sub title like span tag...
 @mixin sectionSubTitle {
   // color: var(--color-text-second);
-  color: $color_primary_two;
+  color: var(--color-primary-two);
   margin-bottom: 1.5rem;
   text-align: center;
   letter-spacing: 1px;

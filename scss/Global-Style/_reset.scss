@@ -14,10 +14,17 @@ html {
   --color-card-body: hsl(0, 0%, 95%);
   --color-card-secondary: linear-gradient(145deg, #eeeeee, #cecece);
   --color-card-secondary-alt: hsl(0, 0%, 81%);
+
+  --color-red: #d10000;
+  --color-primary: #6e57e0;
+  --color-primary-two: #347979;
+  --color-testimonials: #dadada6c;
+
   --color-text-primary: hsl(250, 11%, 7%);
   --color-text-second: hsl(250, 8%, 25%);
   --color-text-third: hsl(250, 8%, 35%);
   --color-section-title: hsl(215, 6%, 14%);
+  --color-section-title-span: #587093;
   --svg-path-fill: #ecf3ff;
   --color-transparent: #83a2f881;
   --gPhoto-overlay-BGcolor: #000000ad;
@@ -32,15 +39,22 @@ html {
 
 html[data-theme="dark"] {
   // --color-body: hsl(214, 10%, 14%);
-  --color-body: #393e46;
+  --color-body: #222222; //#1f2023; //hsl(0, 0%, 7%);    //#393e46;
   --color-secondary: hsl(0, 0%, 96%);
   --color-card-body: hsl(0, 0%, 17%);
   --color-card-secondary: linear-gradient(145deg, #1e2024, #23272b);
   --color-card-secondary-alt: hsl(220, 9%, 13%);
-  --color-text-primary: hsl(250, 10%, 100%);
+
+  --color-red: #ff8e80;
+  --color-primary: #8C75FF;
+  --color-primary-two: #03d8c3;
+  --color-testimonials: #5757579f;
+
+  --color-text-primary: #f2f2f2;
   --color-text-second: hsl(250, 10%, 90%);
   --color-text-third: hsl(250, 10%, 80%);
   --color-section-title: #c4cfde;
+  --color-section-title-span: #7EA6DD;
   --svg-path-fill: hsl(240, 3%, 17%);
   --color-transparent: #ff777781;
   --gPhoto-overlay-BGcolor: #ffffffb3;

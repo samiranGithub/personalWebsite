@@ -1,16 +1,22 @@
 //Colors.......
-$color_hotpink: #ff61b0;
+$color_hotpink: #FF6BA6; //#ff61b0;
 $color_dark: #44424d;
 $color_light: #f5f5f5;
 $color_orange: #f5ab32;
-$color_red: #ff0000;
+$color_red: #FF8E80;//#ff381d; //#ff0000;
 $color_primary: #6e57e0;
 $color_aqua: #00ffff;
-$color_primary_two: #20cb98;
+$color_primary_two: #03d8c3;         //#20cb98;
 $color_red_alt: #f5634d;
 
+$primary_owl_pink: #ff7598;
+$owl_pink: #ff0066;
+$primary_varient: #3600b3;  
+
+
+
 // Gradient Color....
-$color_gradi: linear-gradient(45deg, $color_primary_two, $color_primary);
+$color_gradi: linear-gradient(45deg, var(--color-primary-two), var(--color-red));
 
 //font-family
 $primary_font_family: "Poppins", sans-serif; //body primary font family

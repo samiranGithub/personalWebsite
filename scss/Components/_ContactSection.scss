@@ -82,7 +82,7 @@
     width: 100%;
     > span {
       margin-right: 5px;
-      color: $color_red;
+      color: var(--color-red);
       font-size: $font_size_small;
     }
   }
@@ -122,7 +122,7 @@
     font-size: 1rem;
   }
   > small {
-    color: $color_red;
+    color: var(--color-red);
     position: absolute;
     bottom: -24px;
     left: 0;
@@ -154,7 +154,7 @@
     border-color: #2ecc71;
   }
   i.fa-check-circle {
-    color: $color_primary_two;
+    color: var(--color-primary-two);
     visibility: visible;
   }
   textarea {
@@ -164,17 +164,17 @@
 
 .f-ctl.error {
   input {
-    border-color: $color_red;
+    border-color: var(--color-red);
   }
   i.fa-exclamation-circle {
-    color: $color_red;
+    color: var(--color-red);
     visibility: visible;
   }
   small {
     visibility: visible;
   }
   textarea {
-    border-color: $color_red;
+    border-color: var(--color-red);
   }
 }
 
@@ -182,7 +182,7 @@
   font-weight: 600;
   margin: 0.5rem 0.8rem;
   font-size: 0.938rem;
-  background-color: $color_primary;
+  background-color: var(--color-primary);
   color: whitesmoke;
   padding: 0.5rem 0.7rem;
   outline: none;

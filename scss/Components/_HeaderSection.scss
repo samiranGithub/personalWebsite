@@ -160,7 +160,7 @@
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: $color_primary_two;
+        color: var(--color-primary-two);
       }
 
       &::before {

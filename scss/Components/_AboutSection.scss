@@ -45,7 +45,7 @@
       transform: translateY(-3px);
     }
     > b {
-      color: $color_primary_two;
+      color: var(--color-primary-two);
       font-size: large;
     }
   }
@@ -72,7 +72,7 @@
   margin-top: 2rem;
   align-self: flex-start;
   > a {
-    background-color: $color_primary;
+    background-color: var(--color-primary);
     color: $color_light;
     padding: 3px 10px;
     border-radius: 6px;
@@ -96,7 +96,7 @@
     color: $color_hotpink;
     cursor: pointer;
     font-size: 0.8rem;
-    letter-spacing: 1px;
+    letter-spacing: 1px;  
     font-weight: bold;
     transition: all 0.5s ease-in-out;
     animation: topDown 3s infinite;
