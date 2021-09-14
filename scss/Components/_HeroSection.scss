@@ -107,6 +107,7 @@
     display: block;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s linear;
 
     &:hover {
       color: $color_dark;

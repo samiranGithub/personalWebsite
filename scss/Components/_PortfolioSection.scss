@@ -33,7 +33,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--color-primary);
+  background-color: var(--color_link);
   user-select: none;
   transition: all 0.3s linear;
   &:hover {
@@ -113,7 +113,7 @@
     font-size: $font_size_small;
   }
   > button {
-    background-color: var(--color-primary);
+    background-color: var(--color_link);
     color: $color_light;
     font-size: $font_size_normal;
     padding: 8px 10px;

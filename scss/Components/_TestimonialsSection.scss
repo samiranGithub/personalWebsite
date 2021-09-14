@@ -88,7 +88,7 @@
   > span {
     display: block;
     font-size: $font_size_normal;
-    color: var(--color-primary-two);
+    color: var(--color_primary);
   }
 }
 
@@ -115,7 +115,7 @@
     cursor: pointer;
     &.active {
       transform: scale(1.4);
-      background-color: var(--color-primary-two);
+      background-color: var(--color_primary);
     }
   }
 }

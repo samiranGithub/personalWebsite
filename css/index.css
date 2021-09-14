@@ -15,8 +15,8 @@ html {
   --color-card-secondary: linear-gradient(145deg, #eeeeee, #cecece);
   --color-card-secondary-alt: hsl(0, 0%, 81%);
   --color-red: #d10000;
-  --color-primary: #6e57e0;
-  --color-primary-two: #347979;
+  --color_link: #6e57e0;
+  --color_primary: #347979;
   --color-testimonials: #dadada6c;
   --color-text-primary: hsl(250, 11%, 7%);
   --color-text-second: hsl(250, 8%, 25%);
@@ -25,8 +25,6 @@ html {
   --color-section-title-span: #587093;
   --svg-path-fill: #ecf3ff;
   --color-transparent: #83a2f881;
-  --gPhoto-overlay-BGcolor: #000000ad;
-  --gPhoto-overlay-textColor: hsl(0, 0%, 100%);
   --color-input: hsl(0deg 0% 88%);
   --input-inner-shadow: 1px 4px 2px -3px rgba(211, 211, 211, 0.7) inset,
     -1px -3px 3px -2px rgba(255, 255, 255, 0.705) inset;
@@ -41,8 +39,8 @@ html[data-theme="dark"] {
   --color-card-secondary: linear-gradient(145deg, #1e2024, #23272b);
   --color-card-secondary-alt: hsl(220, 9%, 13%);
   --color-red: #ff8e80;
-  --color-primary: #8C75FF;
-  --color-primary-two: #03d8c3;
+  --color_link: #8C75FF;
+  --color_primary: #03d8c3;
   --color-testimonials: #5757579f;
   --color-text-primary: #f2f2f2;
   --color-text-second: hsl(250, 10%, 90%);
@@ -51,8 +49,6 @@ html[data-theme="dark"] {
   --color-section-title-span: #7EA6DD;
   --svg-path-fill: hsl(240, 3%, 17%);
   --color-transparent: #ff777781;
-  --gPhoto-overlay-BGcolor: #ffffffb3;
-  --gPhoto-overlay-textColor: hsla(0, 0%, 9%, 0.678);
   --color-input: hsl(216, 9%, 11%);
   --input-inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   --color-text-input: hsl(0, 0%, 73%);
@@ -237,7 +233,7 @@ h4 {
 }
 
 .section_sub_title {
-  color: var(--color-primary-two);
+  color: var(--color_primary);
   margin-bottom: 1.5rem;
   text-align: center;
   letter-spacing: 1px;
@@ -633,7 +629,7 @@ body .full-body {
 }
 
 .header__nav_ul > li > a.active {
-  color: #58E4BA;
+  color: #58e4ba;
 }
 
 .header__nav_ul > li > a.active::before {
@@ -859,6 +855,8 @@ body .full-body {
   display: block;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .hero__data_btn_one > a:hover {
@@ -1077,7 +1075,7 @@ body .full-body {
 }
 
 .about__describe__cv > a {
-  background-color: var(--color-primary);
+  background-color: var(--color_link);
   color: #f5f5f5;
   padding: 3px 10px;
   border-radius: 6px;
@@ -1494,12 +1492,12 @@ body .full-body {
 }
 
 .qualification__panel__text > h4 {
-  color: var(--color-primary-two);
+  color: var(--color_primary);
   margin-bottom: 2%;
 }
 
 .qualification__panel__text > h4 > i {
-  color: var(--color-primary-two);
+  color: var(--color_primary);
   margin-right: 8px;
   font-size: 1em;
 }
@@ -1740,7 +1738,7 @@ body .full-body {
 
 .skills__list_items > .progress::before {
   left: 0;
-  border: 7px solid var(--color-primary-two);
+  border: 7px solid var(--color_primary);
 }
 
 .skills__list_items > .progress::after {
@@ -1758,7 +1756,7 @@ body .full-body {
           animation: animate-positive 1s;
   overflow: visible;
   height: 100%;
-  background: linear-gradient(45deg, var(--color-primary-two), var(--color-red));
+  background: linear-gradient(45deg, var(--color_primary), var(--color-red));
 }
 
 @-webkit-keyframes animate-positive {
@@ -1846,8 +1844,8 @@ body .full-body {
 
 .pricing_btn > button {
   padding: 4px 8px;
-  background: -webkit-gradient(linear, left top, right top, from(var(--color-red)), to(var(--color-primary)));
-  background: linear-gradient(90deg, var(--color-red), var(--color-primary));
+  background: -webkit-gradient(linear, left top, right top, from(var(--color-red)), to(var(--color_link)));
+  background: linear-gradient(90deg, var(--color-red), var(--color_link));
   border-radius: 5px;
   cursor: pointer;
   color: #f5f5f5;
@@ -1868,8 +1866,8 @@ body .full-body {
 }
 
 .pricing_btn > button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(var(--color-primary)), to(var(--color-red)));
-  background: linear-gradient(90deg, var(--color-primary), var(--color-red));
+  background: -webkit-gradient(linear, left top, right top, from(var(--color_link)), to(var(--color-red)));
+  background: linear-gradient(90deg, var(--color_link), var(--color-red));
 }
 
 .service_desc_footer {
@@ -2004,7 +2002,7 @@ body .full-body {
   display: block;
   width: 1.3rem;
   height: 2px;
-  background-color: var(--color-primary-two);
+  background-color: var(--color_primary);
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
   border-radius: 100%;
@@ -2065,14 +2063,14 @@ body .full-body {
   position: absolute;
   top: 30%;
   left: 30%;
-  color: var(--color-primary-two);
+  color: var(--color_primary);
   -webkit-transform: rotate(90deg) translateY(-50%) translateX(-50%);
           transform: rotate(90deg) translateY(-50%) translateX(-50%);
 }
 
 .service_content_readmore::before {
   content: "Read More";
-  color: var(--color-primary-two);
+  color: var(--color_primary);
   font-weight: bold;
   padding: 1% 3%;
   position: absolute;
@@ -2143,7 +2141,7 @@ body .full-body {
 }
 
 .pricing_tab_item.active > h3 {
-  color: var(--color-primary-two);
+  color: var(--color_primary);
 }
 
 .pricing__content {
@@ -2184,7 +2182,7 @@ body .full-body {
 
 .pricing__content_data::before {
   content: "";
-  background-color: var(--color-primary-two);
+  background-color: var(--color_primary);
   position: absolute;
   width: 120%;
   height: 100px;
@@ -2271,7 +2269,7 @@ body .full-body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid var(--color-primary-two);
+  border: 1px solid var(--color_primary);
   border-radius: 4px;
   margin-top: 2rem;
   z-index: 1;
@@ -2294,7 +2292,7 @@ body .full-body {
   top: 0;
   height: 0;
   width: 100%;
-  background-color: var(--color-primary-two);
+  background-color: var(--color_primary);
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
@@ -2541,7 +2539,7 @@ body .full-body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-color: var(--color-primary);
+  background-color: var(--color_link);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -2660,7 +2658,7 @@ body .full-body {
 }
 
 .portfolio__items_data > button {
-  background-color: var(--color-primary);
+  background-color: var(--color_link);
   color: #f5f5f5;
   font-size: 1rem;
   padding: 8px 10px;
@@ -2897,7 +2895,7 @@ body .full-body {
 .testimonials__person_info > span {
   display: block;
   font-size: 1rem;
-  color: var(--color-primary-two);
+  color: var(--color_primary);
 }
 
 .testimonials__person_social {
@@ -2945,7 +2943,7 @@ body .full-body {
 .testimonials__section_indicator .slideIndicator.active {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  background-color: var(--color-primary-two);
+  background-color: var(--color_primary);
 }
 
 /***** testimonials Section End ******/
@@ -3290,7 +3288,7 @@ body .full-body {
 }
 
 .f-ctl.success i.fa-check-circle {
-  color: var(--color-primary-two);
+  color: var(--color_primary);
   visibility: visible;
 }
 
@@ -3319,7 +3317,7 @@ body .full-body {
   font-weight: 600;
   margin: 0.5rem 0.8rem;
   font-size: 0.938rem;
-  background-color: var(--color-primary);
+  background-color: var(--color_link);
   color: whitesmoke;
   padding: 0.5rem 0.7rem;
   outline: none;

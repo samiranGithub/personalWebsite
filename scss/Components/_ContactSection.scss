@@ -154,7 +154,7 @@
     border-color: #2ecc71;
   }
   i.fa-check-circle {
-    color: var(--color-primary-two);
+    color: var(--color_primary);
     visibility: visible;
   }
   textarea {
@@ -182,7 +182,7 @@
   font-weight: 600;
   margin: 0.5rem 0.8rem;
   font-size: 0.938rem;
-  background-color: var(--color-primary);
+  background-color: var(--color_link);
   color: whitesmoke;
   padding: 0.5rem 0.7rem;
   outline: none;
