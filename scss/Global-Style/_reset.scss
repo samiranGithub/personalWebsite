@@ -18,10 +18,10 @@ html {
   --color-red: #d10000;
   --color_link: #6e57e0;
   --color_primary: #347979;
-  --color-testimonials: #dadada6c;
+  --color_testimonials: #dadada6c;
 
-  --color-text-primary: hsl(250, 11%, 7%);
-  --color-text-second: hsl(250, 8%, 25%);
+  --color_text_primary: hsl(250, 11%, 7%);
+  --color_text_title: hsl(250, 8%, 25%);
   --color-text-third: hsl(250, 8%, 35%);
   --color-section-title: hsl(215, 6%, 14%);
   --color-section-title-span: #587093;
@@ -46,10 +46,10 @@ html[data-theme="dark"] {
   --color-red: #ff8e80;
   --color_link: #8C75FF;
   --color_primary: #03d8c3;
-  --color-testimonials: #5757579f;
+  --color_testimonials: #5757579f;
 
-  --color-text-primary: #f2f2f2;
-  --color-text-second: hsl(250, 10%, 90%);
+  --color_text_primary: hsl(0, 0%, 95%); // For >> p, article, ul, li tags color
+  --color_text_title: hsl(250, 10%, 90%); // For >> h1 - h2 tags color
   --color-text-third: hsl(250, 10%, 80%);
   --color-section-title: #c4cfde;
   --color-section-title-span: #7EA6DD;
@@ -110,7 +110,7 @@ caption {
 /* Here h1 tag Only Used in Hero Header*/
 h1 {
   font-size: $heading_h1_font_size;
-  color: var(--color-text-primary);
+  color: var(--color_text_primary);
   @include smallDevice {
     font-size: 2.4rem;
   }
@@ -120,13 +120,13 @@ h1 {
 /* Here h2 tag Only used for Section Tittle*/
 h2 {
   font-size: $heading_h2_font_size;
-  color: var(--color-text-second);
+  color: var(--color_text_title);
 }
 /* Here h2 tag Only used for Section Tittle*/
 
 /* Here h3 tag Only used for section inner div*/
 h3 {
-  color: var(--color-text-second);
+  color: var(--color_text_title);
   font-size: $heading_h3_font_size;
   font-weight: 500;
 }
@@ -135,6 +135,6 @@ h3 {
 /* Here h4 tag Only used for section inner div -2 */
 h4 {
   font-size: $heading_h4_font_size;
-  color: var(--color-text-second);
+  color: var(--color_text_title);
 }
 /* Here h4 tag Only used for section inner div -2 */

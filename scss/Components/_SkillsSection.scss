@@ -31,13 +31,13 @@
   padding: 1% 0 2% 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  color: var(--color-text-second);
+  color: var(--color_text_title);
 
   > i {
     margin-right: 5%;
   }
   > h3 {
-    color: var(--color-text-second);
+    color: var(--color_text_title);
     transition: all 0.5s linear;
     &:hover {
       color: $color_hotpink;
@@ -57,7 +57,7 @@
     height: 3px;
     bottom: 0;
     left: 50%;
-    background-color: var(--color-text-second);
+    background-color: var(--color_text_title);
     z-index: 1;
     transform: translate(-50%, -50%);
   }
@@ -355,7 +355,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: var(--color-text-second);
+  color: var(--color_text_title);
   > span {
     font-size: 1.25rem;
     margin-right: 2%;
@@ -400,7 +400,7 @@
   > .progress-title {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--color-text-second);
+    color: var(--color_text_title);
     text-transform: capitalize;
     align-self: flex-start;
     margin: 0% 0 2% 10%;
