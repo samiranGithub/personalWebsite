@@ -100,7 +100,7 @@
 }
 // faq active class for faq Tabs...
 .faq__items.active .faq__tabs {
-  color: var(--color-text-third);
+  color: var(--color_text_secondary);
   span {
     &::after {
       transform: translateY(-50%) rotate(0deg);

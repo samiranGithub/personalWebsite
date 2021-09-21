@@ -12,11 +12,11 @@
   margin-bottom: 0.6rem;
   letter-spacing: 1px;
   position: relative;
-  color: var(--color-section-title);
+  color: var(--color_section_title);
 
   > span {
     font: normal 600 2.2rem $font_oswald;
-    color: var(--color-section-title-span);
+    color: var(--color_section_title_span);
     position: relative;
     text-decoration: underline;
     text-underline-position: under;

@@ -20,9 +20,9 @@ html {
   --color_testimonials: #dadada6c;
   --color_text_primary: hsl(250, 11%, 7%);
   --color_text_title: hsl(250, 8%, 25%);
-  --color-text-third: hsl(250, 8%, 35%);
-  --color-section-title: hsl(215, 6%, 14%);
-  --color-section-title-span: #587093;
+  --color_text_secondary: hsl(250, 8%, 35%);
+  --color_section_title: hsl(215, 6%, 14%);
+  --color_section_title_span: #587093;
   --svg-path-fill: #ecf3ff;
   --color-transparent: #83a2f881;
   --color-input: hsl(0deg 0% 88%);
@@ -39,14 +39,14 @@ html[data-theme="dark"] {
   --color-card-secondary: linear-gradient(145deg, #1e2024, #23272b);
   --color-card-secondary-alt: hsl(220, 9%, 13%);
   --color-red: #ff8e80;
-  --color_link: #8C75FF;
+  --color_link: #8c75ff;
   --color_primary: #03d8c3;
   --color_testimonials: #5757579f;
   --color_text_primary: hsl(0, 0%, 95%);
   --color_text_title: hsl(250, 10%, 90%);
-  --color-text-third: hsl(250, 10%, 80%);
-  --color-section-title: #c4cfde;
-  --color-section-title-span: #7EA6DD;
+  --color_text_secondary: hsl(250, 10%, 80%);
+  --color_section_title: #c4cfde;
+  --color_section_title_span: #7ea6dd;
   --svg-path-fill: hsl(240, 3%, 17%);
   --color-transparent: #ff777781;
   --color-input: hsl(216, 9%, 11%);
@@ -55,24 +55,22 @@ html[data-theme="dark"] {
   --color-header-shadow: #000000;
 }
 
-span,
-label,
 p,
-li,
-a {
-  color: var(--color-text-third);
-  font-size: 1rem;
-}
-
+a,
+article,
 ul,
 li,
-p,
-span,
-a {
+span {
+  color: var(--color_text_primary);
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+}
+
+label {
+  color: var(--color_text_secondary);
 }
 
 h1,
@@ -85,6 +83,7 @@ h6 {
   padding: 0;
   line-height: unset;
   font-weight: 400;
+  color: var(--color_text_title);
 }
 
 img,
@@ -115,13 +114,11 @@ h1 {
 /* Here h2 tag Only used for Section Tittle*/
 h2 {
   font-size: 1.9rem;
-  color: var(--color_text_title);
 }
 
 /* Here h2 tag Only used for Section Tittle*/
 /* Here h3 tag Only used for section inner div*/
 h3 {
-  color: var(--color_text_title);
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -130,7 +127,6 @@ h3 {
 /* Here h4 tag Only used for section inner div -2 */
 h4 {
   font-size: 1.031rem;
-  color: var(--color_text_title);
 }
 
 /* Here h4 tag Only used for section inner div -2 */
@@ -215,12 +211,12 @@ h4 {
   margin-bottom: 0.6rem;
   letter-spacing: 1px;
   position: relative;
-  color: var(--color-section-title);
+  color: var(--color_section_title);
 }
 
 .section_title > span {
   font: normal 600 2.2rem "Oswald", sans-serif;
-  color: var(--color-section-title-span);
+  color: var(--color_section_title_span);
   position: relative;
   text-decoration: underline;
   text-underline-position: under;
@@ -606,7 +602,7 @@ body .full-body {
 }
 
 .header__nav_ul > li > a:hover {
-  color: var(--color-primary-two);
+  color: var(--color_primary);
 }
 
 .header__nav_ul > li > a::before {
@@ -1040,7 +1036,7 @@ body .full-body {
 }
 
 .about__describe_text > p > b {
-  color: var(--color-primary-two);
+  color: var(--color_primary);
   font-size: large;
 }
 
@@ -1514,7 +1510,7 @@ body .full-body {
 }
 
 .qualification__panel__text > span {
-  color: var(--color-text-third);
+  color: var(--color_text_secondary);
   display: block;
   font-size: 0.906rem;
 }
@@ -1539,7 +1535,7 @@ body .full-body {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 15px 0;
-  border-bottom: 1px solid var(--color-text-third);
+  border-bottom: 1px solid var(--color_text_secondary);
 }
 
 .qualification_personal_info_ul > li .p_label {
@@ -3052,7 +3048,7 @@ body .full-body {
 }
 
 .faq__items.active .faq__tabs {
-  color: var(--color-text-third);
+  color: var(--color_text_secondary);
 }
 
 .faq__items.active .faq__tabs span::after {
