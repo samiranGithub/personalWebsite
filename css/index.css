@@ -30,6 +30,7 @@ html {
     -1px -3px 3px -2px rgba(255, 255, 255, 0.705) inset;
   --color-text-input: hsl(0, 0%, 36%);
   --color-header-shadow: #00776b;
+  --color_faqitems: hsl(0, 0%, 95%);
 }
 
 html[data-theme="dark"] {
@@ -53,6 +54,7 @@ html[data-theme="dark"] {
   --input-inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   --color-text-input: hsl(0, 0%, 73%);
   --color-header-shadow: #000000;
+  --color_faqitems: hsl(0, 0%, 17%);
 }
 
 p,
@@ -69,7 +71,8 @@ span {
   list-style: none;
 }
 
-label {
+label,
+i {
   color: var(--color_text_secondary);
 }
 
@@ -84,6 +87,7 @@ h6 {
   line-height: unset;
   font-weight: 400;
   color: var(--color_text_title);
+  word-break: break-all;
 }
 
 img,
@@ -121,6 +125,12 @@ h2 {
 h3 {
   font-size: 1.3rem;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 575.98px) {
+  h3 {
+    font-size: 1.1rem;
+  }
 }
 
 /* Here h3 tag Only used for section inner div*/
@@ -224,7 +234,10 @@ h4 {
 
 @media only screen and (max-width: 575.98px) {
   .section_title {
-    font-size: 2rem;
+    font-size: 1.4rem;
+  }
+  .section_title > span {
+    font-size: 1.4rem;
   }
 }
 
@@ -1574,7 +1587,6 @@ body .full-body {
             flex-direction: column;
   }
   .qualification__head > h3 {
-    font-size: 1.1rem;
     z-index: 99;
   }
 }
@@ -1793,12 +1805,6 @@ body .full-body {
   color: #44424d;
 }
 
-@media only screen and (max-width: 768px) {
-  .skills__header__text > h3 {
-    font-size: 1.1rem;
-  }
-}
-
 /*======== My-Skills Section End ========*/
 /**** Service Section Start ****/
 #service__section {
@@ -1824,7 +1830,7 @@ body .full-body {
   text-align: left;
 }
 
-.service_info > h6 {
+.service_info > span {
   text-align: left;
 }
 
@@ -2299,6 +2305,12 @@ body .full-body {
 
 /* Media Query For Pricing Section*/
 @media only screen and (max-width: 575.98px) {
+  .service_info > h2 {
+    text-align: center;
+  }
+  .service_info > span {
+    text-align: center;
+  }
   .pricing__content_data {
     margin-bottom: 2rem;
   }
@@ -2771,7 +2783,7 @@ body .full-body {
 .testimonials__slider > .testimonialsNextBtn,
 .testimonials__slider .testimonialsPrevBtn {
   position: absolute;
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2789,20 +2801,26 @@ body .full-body {
 
 .testimonials__slider > .testimonialsNextBtn {
   top: 50%;
-  right: 10%;
+  right: 0%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
 }
 
 .testimonials__slider > .testimonialsPrevBtn {
   top: 50%;
-  left: 10%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
 .testimonials__slide {
   display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -2811,6 +2829,7 @@ body .full-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-animation: slide 1s ease;
           animation: slide 1s ease;
 }
@@ -2842,10 +2861,6 @@ body .full-body {
 }
 
 .testimonials__person_photo {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2864,10 +2879,6 @@ body .full-body {
 }
 
 .testimonials__person_info {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2883,29 +2894,18 @@ body .full-body {
           flex-direction: column;
 }
 
-.testimonials__person_info > h3 {
-  margin: 0.625rem 0 1.875rem 0;
-  font-size: 1.031rem;
+.testimonials__person_info p {
+  text-align: justify;
 }
 
-.testimonials__person_info > span {
-  display: block;
-  font-size: 1rem;
-  color: var(--color_primary);
+.testimonials__person_info p > i {
+  font-size: 2rem;
+  margin: 0 10px;
 }
 
-.testimonials__person_social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10% 0 0 0;
-  width: 100%;
+.testimonials__person_info > i {
+  margin-top: 20px;
+  text-align: right;
 }
 
 .testimonials__section_indicator {
@@ -3002,19 +3002,23 @@ body .full-body {
 }
 
 .faq__tabs {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   margin: 0;
   position: relative;
   padding: 0.938rem 1.875rem;
   width: 100%;
   display: block;
   font-weight: 500;
-  background-color: #26262600;
+  background-color: var(--color_faqitems);
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
-  -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
-          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
+  -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
 .faq__tabs span {
@@ -3049,6 +3053,10 @@ body .full-body {
 
 .faq__items.active .faq__tabs {
   color: var(--color_text_secondary);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
 }
 
 .faq__items.active .faq__tabs span::after {
@@ -3074,6 +3082,10 @@ body .full-body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--color_faqitems);
+  padding: 0.938rem 1.875rem;
 }
 
 /*==== Faq Section End ====*/
@@ -3101,15 +3113,10 @@ body .full-body {
           flex-direction: column;
 }
 
-.contact_map {
-  width: 100%;
-  height: 100%;
+.contact_info > img {
   margin-bottom: 15%;
-}
-
-.contact_map > iframe {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: auto;
 }
 
 .contact_text {

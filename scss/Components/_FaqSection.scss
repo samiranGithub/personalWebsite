@@ -60,6 +60,7 @@
 }
 
 .faq__tabs {
+  user-select: none;
   margin: 0;
   position: relative;
   padding: 0.938rem 1.875rem;
@@ -67,12 +68,12 @@
   // color: $color_dark;
   display: block;
   font-weight: 500;
-  background-color: #26262600;
+  background-color: var(--color_faqitems);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15),
-    0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
+    0 10px 10px -5px rgba(0, 0, 0, 0.1);
   span {
     display: block;
     position: absolute;
@@ -101,6 +102,10 @@
 // faq active class for faq Tabs...
 .faq__items.active .faq__tabs {
   color: var(--color_text_secondary);
+  box-shadow: none;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+
   span {
     &::after {
       transform: translateY(-50%) rotate(0deg);
@@ -124,6 +129,10 @@
   padding: 0.938rem 0.625rem 0.625rem 0.625rem;
   opacity: 1;
   height: max-content;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--color_faqitems);
+  padding: 0.938rem 1.875rem;
 }
 
 /*==== Faq Section End ====*/

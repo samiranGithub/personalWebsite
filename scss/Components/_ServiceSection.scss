@@ -20,7 +20,7 @@
     text-align: left;
   }
 
-  > h6 {
+  > span {
     text-align: left;
   }
 }
@@ -417,6 +417,15 @@
 
 /* Media Query For Pricing Section*/
 @include smallDevice {
+  .service_info {
+    > h2 {
+      text-align: center;
+    }
+    > span {
+      text-align: center;
+    }
+  }
+
   .pricing__content_data {
     margin-bottom: 2rem;
     > h3 {

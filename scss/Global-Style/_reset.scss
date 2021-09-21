@@ -34,6 +34,8 @@ html {
     -1px -3px 3px -2px rgba(255, 255, 255, 0.705) inset;
   --color-text-input: hsl(0, 0%, 36%);
   --color-header-shadow: #00776b;
+
+  --color_faqitems: hsl(0, 0%, 95%);
 }
 
 html[data-theme="dark"] {
@@ -62,6 +64,8 @@ html[data-theme="dark"] {
   --input-inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   --color-text-input: hsl(0, 0%, 73%);
   --color-header-shadow: #000000;
+
+  --color_faqitems: hsl(0, 0%, 17%);;
 }
 
 p,
@@ -78,7 +82,8 @@ span {
   list-style: none;
 }
 
-label {
+label,
+i {
   color: var(--color_text_secondary);
 }
 
@@ -93,6 +98,7 @@ h6 {
   line-height: unset;
   font-weight: 400;
   color: var(--color_text_title);
+  word-break: break-all;
 }
 
 img,
@@ -127,6 +133,9 @@ h2 {
 h3 {
   font-size: $heading_h3_font_size;
   font-weight: 500;
+  @include smallDevice {
+    font-size: 1.1rem;
+  }
 }
 /* Here h3 tag Only used for section inner div*/
 

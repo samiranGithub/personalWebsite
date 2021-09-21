@@ -6,8 +6,13 @@
 
 .section_title {
   @include sectionTitle;
+
   @include smallDevice {
-    font-size: 2rem;
+    font-size: 1.4rem;
+
+    > span {
+      font-size: 1.4rem;
+    }
   }
 }
 
